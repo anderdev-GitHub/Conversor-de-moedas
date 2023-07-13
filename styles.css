@@ -8,20 +8,32 @@
 body {
     background: rgb(58,180,68);
     background: linear-gradient(205deg, rgba(58,180,68,1) 0%, rgba(253,217,29,1) 50%, rgba(0,1,255,1) 100%);
-    padding: 100px;
     min-height: 100vh;
 }
 
+.coin-flip {
+    width: 100px;
+    display: block;
+    margin: 20px auto;
+}
+
 .container {
-    width: 375px;
-    margin: auto;
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto 40px;
     background: #F4F4F4;
+    background-image: url('./assets/logo-3.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
     box-shadow: rgba(13, 0, 192, 0.56) 0px 22px 70px 4px;
+    border-radius: 20px;
 }
 
 header {
     background: #0001ff;
     height: 66px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px
 }
 
 h1 {
@@ -138,68 +150,3 @@ section {
     transform: translateY(15px);
     transition: all 0.5s ease-in-out;
   }
-
-
-
-@media screen and  (max-width: 1024px) {
-    body {
-        padding: 27%;
-    }
-
-    .container {
-        width: auto;
-    }
-}
-
-@media screen and  (max-width: 800px) {
-    body {
-        padding: 24%;
-    }
-
-    .container {
-        margin-bottom: 78px;
-    }
-}
-
-@media screen and  (max-width: 712px) {
-    body {
-        padding: 24%;
-    }
-
-    .container {
-        margin-bottom: 0;
-    }
-}
-
-@media screen and  (max-width: 712px) {
-    body {
-        padding: 18%;
-    }
-}
-
-
-@media screen and  (max-width: 575px) {
-    body {
-        padding: 10%;
-    }
-
-    h1 {
-        line-height: 29px;
-        padding: 18px;
-    }
-}
-
-
-@media screen and  (max-width: 412px) {
-    body {
-        padding: 12%;
-    }
-}
-
-@media screen and (max-width: 357px) {
-    h1 {
-        line-height: 34px;
-        padding: 7%;
-        font-size: 20px;
-    }
-}
