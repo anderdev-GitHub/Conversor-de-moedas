@@ -50,7 +50,7 @@ main {
 
 label {
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 14px;
     line-height: 18px;
     color: #ffffff;
@@ -148,4 +148,29 @@ section {
 .move-down {
     transform: translateY(15px);
     transition: all 0.5s ease-in-out;
-  }
+}
+
+footer {
+    color: #ff0000;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a ion-icon[name="logo-instagram"] {
+    display: inline-block;
+    vertical-align: -10%;
+}
+
+footer a:hover {
+    font-weight: 600;
+    background: -webkit-linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
