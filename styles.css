@@ -6,7 +6,7 @@
 }
 
 body {
-    background: url('./assets/background.gif') no-repeat center center fixed;
+    background: url('./assets/background-monochrome-rain.gif') no-repeat center fixed;
     background-size: cover;
     min-height: 100vh;
 }
@@ -173,4 +173,10 @@ footer a:hover {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+footer span {
+    background: #1a1a1a80;
+    border-radius: 20px;
+    padding: 5px;
 }
