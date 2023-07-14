@@ -6,8 +6,8 @@
 }
 
 body {
-    background: rgb(58,180,68);
-    background: linear-gradient(205deg, rgba(58,180,68,1) 0%, rgba(253,217,29,1) 50%, rgba(0,1,255,1) 100%);
+    background: url('./assets/background.gif') no-repeat center center fixed;
+    background-size: cover;
     min-height: 100vh;
 }
 
@@ -21,16 +21,14 @@ body {
     width: 100%;
     max-width: 375px;
     margin: 0 auto 40px;
-    background: #F4F4F4;
-    background-image: url('./assets/logo-3.gif');
-    background-repeat: no-repeat;
+    background: url('./assets/kira-coin.gif') no-repeat center center;
     background-size: cover;
-    box-shadow: rgba(13, 0, 192, 0.56) 0px 22px 70px 4px;
+    box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
     border-radius: 20px;
 }
 
 header {
-    background: #0001ff;
+    background: #ff000091;
     height: 66px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px
@@ -43,7 +41,7 @@ h1 {
     line-height: 18px;
     text-align: center;
     padding: 25px;
-    color: #F4F4F4;
+    color: #f4f4f4;
 }
 
 main {
@@ -55,12 +53,12 @@ label {
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
-    color: #777777;
+    color: #ffffff;
     margin-bottom: 26px;
 }
 
 select {
-    background: #FFFFFF;
+    background: #ffffff81;
     border: 1px solid #BBBBBB;
     border-radius: 4px;
     height: 48px;
@@ -70,7 +68,7 @@ select {
     outline: none;
     appearance: none;
     padding: 12px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5);
     margin-top: 6px;
     margin-bottom: 24px;
     text-align: center;
@@ -78,7 +76,8 @@ select {
 }
 
 input {
-    background: #FFFFFF;
+    color: #ff000091;
+    background: #ffffff81;
     border: 1px solid #BBBBBB;
     border-radius: 4px;
     height: 48px;
@@ -86,7 +85,7 @@ input {
     width: 100%;
     outline: none;
     padding: 16px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5);
     margin-top: 6px;
     margin-bottom: 24px;
     font-size: 18px;
@@ -94,7 +93,7 @@ input {
 }
 
 button {
-    background: #0001ff;
+    background: #ff000091;
     border-radius: 25px;
     height: 48px;
     width: 100%;
@@ -118,7 +117,7 @@ button:active {
 }
 
 section {
-    border: 1px solid #1B83E2;
+    border: 1px solid #ff000091;
     border-radius: 4px;
 }
 
@@ -132,13 +131,13 @@ section {
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
-    color: #777777;
+    color: #ffffff;
 }
 
 .currency-value {
     font-weight: 700;
     font-size: 20px;
-    color: #1B83E2;
+    color: #ff000091;
 }
 
 .arrow-img {

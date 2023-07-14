@@ -64,7 +64,7 @@ const arrowImg = document.querySelector(".arrow-img")
 document.getElementById("convert-button").addEventListener("click", () => {
   if (!arrowImg.classList.contains("move-down")) {
        arrowImg.classList.add("move-down")
-    arrowImg.setAttribute("src", "./assets/arrow-blue.png")
+    arrowImg.setAttribute("src", "./assets/arrow-red.png")
   } else {
     arrowImg.classList.remove("move-down")
     arrowImg.setAttribute("src", "./assets/arrow-gray.png")
