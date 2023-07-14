@@ -15,7 +15,7 @@ Este projeto é um conversor de moedas simples que permite aos usuários convert
 
 <br>
 
-<img alt="Layout" src="https://github.com/anderdev-GitHub/Conversor-de-moedas/blob/4ef091a8c6e9f9ea49a8cd39f398c1d5150fb5cf/assets/img-project.png">
+<img alt="Layout" src="https://github.com/anderdev-GitHub/Conversor-de-moedas/blob/b303f004e5b4f76b397aa07c66204af98c73901d/assets/img-project.png">
 <br>
 
 
