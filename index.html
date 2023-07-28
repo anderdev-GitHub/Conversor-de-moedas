@@ -29,8 +29,11 @@
 
       <label>
         Converter de
-        <select>
-          <option>R$ Real brasileiro</option>
+        <select class="currency-select-to-convert">
+          <option value="real">R$ Real brasileiro</option>
+          <option value="dolar">USD$ Dólar americano</option>
+          <option value="euro">€ Euro</option>
+          <option value="bitcoin">₿ Bitcoin</option>
         </select>
       </label>
 
@@ -38,6 +41,7 @@
         Para
         <select class="currency-select">
           <option value="dolar">USD$ Dólar americano</option>
+          <option value="real">R$ Real brasileiro</option>
           <option value="euro">€ Euro</option>
           <option value="bitcoin">₿ Bitcoin</option>
         </select>
@@ -47,7 +51,7 @@
 
       <section>
         <div class="currency-container">
-          <img src="./assets/real.png" alt="img-país">
+          <img class="currency-img" src="./assets/real.png" alt="img-país">
           <p class="currency-name">Real brasileiro</p>
           <p class="currency-value-to-convert">R$ 0,00</p>
         </div>
