@@ -5,15 +5,186 @@ const currencySelectToConvert = document.querySelector (".currency-select-to-con
 const dolarToday = 5.2
 const euroToday = 6.3
 const btcToday = 149.81710
+const realToday = 1.00
 
 const convertValue = () => {
     const inputCurrencyValue = document.querySelector (".input-currency").value
     const currencyValueToConvert = document.querySelector (".currency-value-to-convert")
     const currencyValueConverted = document.querySelector (".currency-value")
-    currencyValueToConvert.innerHTML = inputCurrencyValue
+   /*  currencyValueToConvert.innerHTML = inputCurrencyValue */
     
+    /* do real para todas as moedas */
+    if (currencySelectToConvert.value == "real" && currencySelect.value == "real") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputCurrencyValue)
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputCurrencyValue/realToday)
+    }
+    if (currencySelectToConvert.value == "real" && currencySelect.value == "dolar") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputCurrencyValue)
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue/dolarToday)
+    }
+    if (currencySelectToConvert.value == "real" && currencySelect.value == "euro") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputCurrencyValue)
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCurrencyValue/euroToday)
+    }
+    if (currencySelectToConvert.value == "real" && currencySelect.value == "bitcoin") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputCurrencyValue)
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "BTC"
+        }).format(inputCurrencyValue/btcToday)
+    }
+
+    /* Todas as moedas para o real */
+    if (currencySelectToConvert.value == "dolar" && currencySelect.value == "real") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue)
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputCurrencyValue * dolarToday)
+    }
+    if (currencySelectToConvert.value == "euro" && currencySelect.value == "real") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCurrencyValue)
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputCurrencyValue * euroToday)
+    }
+    if (currencySelectToConvert.value == "bitcoin" && currencySelect.value == "real") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "BTC"
+        }).format(inputCurrencyValue)
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputCurrencyValue * btcToday)
+    }
+
+     /* Dolar para todas as moedas */
+     if (currencySelectToConvert.value == "dolar" && currencySelect.value == "dolar") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue) /* valor que entra no input */
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue) /* Valor que sai do input convertido */
+    }
+    if (currencySelectToConvert.value == "dolar" && currencySelect.value == "euro") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue)
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCurrencyValue * dolarToday / euroToday)
+    }
+    if (currencySelectToConvert.value == "dolar" && currencySelect.value == "bitcoin") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue) /* valor que entra no input */
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "BTC"
+        }).format(inputCurrencyValue) /* Valor que sai do input convertido */
+    }
+
+    /* Euro para todas as moedas */
+    if (currencySelectToConvert.value == "euro" && currencySelect.value == "euro") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCurrencyValue)
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCurrencyValue)
+    }
+    if (currencySelectToConvert.value == "euro" && currencySelect.value == "dolar") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCurrencyValue)
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue * euroToday / dolarToday)
+    }
+    if (currencySelectToConvert.value == "euro" && currencySelect.value == "bitcoin") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCurrencyValue)
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "BTC"
+        }).format(inputCurrencyValue * euroToday / btcToday)
+    }
+
+    /* Bitcoin para todas as moedas */
+    if (currencySelectToConvert.value == "bitcoin" && currencySelect.value == "dolar") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "BTC"
+        }).format(inputCurrencyValue) /* valor que entra no input */
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue) /* Valor que sai do input convertido */
+    }
+    if (currencySelectToConvert.value == "bitcoin" && currencySelect.value == "euro") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "BTC"
+        }).format(inputCurrencyValue)
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCurrencyValue * dolarToday / euroToday)
+    }
+    if (currencySelectToConvert.value == "bitcoin" && currencySelect.value == "bitcoin") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "BTC"
+        }).format(inputCurrencyValue) /* valor que entra no input */
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "BTC"
+        }).format(inputCurrencyValue) /* Valor que sai do input convertido */
+    }
+
     /* Input valor digitado pelo usuário*/
-    if (currencySelectToConvert.value == "real"){
+   /*  if (currencySelectToConvert.value == "real"){
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency", 
         currency: "BRL",
@@ -24,7 +195,7 @@ const convertValue = () => {
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
         style: "currency", 
         currency: "USD" 
-    }).format(inputCurrencyValue);
+    }).format(inputCurrencyValue / dolarToday);
     }
 
     if(currencySelectToConvert.value == "euro"){
@@ -39,10 +210,10 @@ const convertValue = () => {
             style: "currency", 
             currency: "BTC" 
     }).format(inputCurrencyValue);
-    }
+    } */
 
     /* select de "converter de"*/
-    if(currencySelectToConvert.value == "real"){
+   /*  if(currencySelectToConvert.value == "real"){
     currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency", 
         currency: "BRL" 
@@ -68,10 +239,10 @@ const convertValue = () => {
             style: "currency", 
             currency: "BTC" 
     }).format(inputCurrencyValue);
-     }
+     } */
 
     /* select de "converter para"*/
-    if(currencyselect.value == "real"){
+    /* if(currencyselect.value == "real"){
     currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency", 
         currency: "BRL" 
@@ -97,7 +268,7 @@ const convertValue = () => {
             style: "currency", 
             currency: "BTC" 
     }).format(inputCurrencyValue / btcToday)
-     }
+     } */
 }
 
 changeCurrency = () => {
