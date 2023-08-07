@@ -8,7 +8,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Conversor de Moedas │ _anderdev</title>
+  <title>Conversor de Moedas │ Death Note</title>
   <link rel="shortcut icon" href="assets/favicon-anderdev-dourado.ico">
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -24,32 +24,36 @@
     <main>
       <label>
         Valor
-        <input id="input-real" type="text" placeholder="ex: 10000">
+        <input class="input-currency" type="text" placeholder="ex: 10000">
       </label>
 
       <label>
         Converter de
-        <select>
-          <option>R$ Real brasileiro</option>
+        <select class="currency-select-to-convert">
+          <option value="brl">R$ Real brasileiro</option>
+          <option value="usd">USD$ Dólar americano</option>
+          <option value="eur">€ Euro</option>
+          <option value="btc">₿ Bitcoin</option>
         </select>
       </label>
 
       <label>
         Para
-        <select id="currency-select">
-          <option>USD$ Dólar americano</option>
-          <option>€ Euro</option>
-          <option>₿ Bitcoin</option>
+        <select class="currency-select">
+          <option value="dolar">USD$ Dólar americano</option>
+          <option value="real">R$ Real brasileiro</option>
+          <option value="euro">€ Euro</option>
+          <option value="bitcoin">₿ Bitcoin</option>
         </select>
       </label>
 
-      <button id="convert-button" type="button">Converção</button>
+      <button class="convert-button">Converção</button>
 
       <section>
         <div class="currency-container">
-          <img src="./assets/real.png" alt="img-país">
+          <img class="currency-img" src="./assets/real.png" alt="img-país">
           <p class="currency-name">Real brasileiro</p>
-          <p id="real-value-text" class="currency-value">R$ 0,00</p>
+          <p class="currency-value-to-convert">R$ 0,00</p>
         </div>
 
         <img class="arrow-img" src="./assets/arrow-gray.png" alt="seta">
@@ -57,7 +61,7 @@
         <div class="currency-container">
           <img id="currency-img" src="./assets/dolar.png" alt="img-país">
           <p id="currency-name" class="currency-name">Dólar americano</p>
-          <p id="currency-value-text" class="currency-value">$0.00</p>
+          <p class="currency-value">$0.00</p>
         </div>
       </section>
     </main>
