@@ -2,16 +2,18 @@ const convertButton = document.querySelector (".convert-button")
 const currencySelect = document.querySelector (".currency-select")
 const currencySelectToConvert = document.querySelector (".currency-select-to-convert")
 
-const dolarToday = 5.2
-const euroToday = 6.3
-const btcToday = 142.215
-const realToday = 1.00
-
-const convertValue = () => {
+const convertValue = async () => {
     const inputCurrencyValue = document.querySelector (".input-currency").value
     const currencyValueToConvert = document.querySelector (".currency-value-to-convert")
     const currencyValueConverted = document.querySelector (".currency-value")
     
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
+
+    const dolarToday = data.USDBRL.high
+    const euroToday = data.EURBRL.high
+    const btcToday = data.BTCBRL.high
+    const realToday = 1.00
+
     /* Real para todas as moedas */
     if (currencySelectToConvert.value == "brl" && currencySelect.value == "real") {
         currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
