@@ -8,19 +8,19 @@
 body {
     background: url('./assets/background-monochrome-rain.gif') no-repeat center fixed;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     min-height: 100vh;
 }
 
 .coin-flip {
     width: 100px;
-    display: block;
-    margin: 20px auto;
 }
 
 .container {
-    width: 100%;
-    max-width: 375px;
-    margin: 0 auto 40px;
+    width: 375px;
     background: url('./assets/Kira-coin.gif') no-repeat center center;
     background-size: cover;
     box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
@@ -31,7 +31,10 @@ header {
     background: #ff000091;
     height: 66px;
     border-top-left-radius: 20px;
-    border-top-right-radius: 20px
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -39,8 +42,6 @@ h1 {
     font-weight: 700;
     font-size: 24px;
     line-height: 18px;
-    text-align: center;
-    padding: 25px;
     color: #f4f4f4;
 }
 
@@ -119,11 +120,18 @@ button:active {
 section {
     border: 1px solid #ff000091;
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .currency-container {
-    text-align: center;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
 }
 
 .currency-name {
@@ -138,11 +146,6 @@ section {
     font-weight: 700;
     font-size: 20px;
     color: #ff000091;
-}
-
-.arrow-img {
-    margin: 15px auto;
-    display: block;
 }
 
 .move-down {
